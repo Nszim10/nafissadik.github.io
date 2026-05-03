@@ -16,8 +16,7 @@
     padding: 0 80px;
     width: 100%;
     gap: 60px;
-    flex-wrap: wrap;
-  ">
+  " id="hero-inner">
 
     <!-- LEFT: text content -->
     <div class="hero-content" style="padding: 0; max-width: 620px; animation: fadeUp 1s ease both;">
@@ -47,12 +46,9 @@
 
     <!-- RIGHT: your photo -->
     <!-- Make sure photo.jpg is uploaded to the root of your GitHub repo -->
-    <div style="
+   <div style="
       flex-shrink: 0;
       animation: fadeUp 1.2s ease both;
-      display: flex;
-      justify-content: center;
-      width: 100%;
     ">
       <img
         src="formalpic.jpg"
@@ -76,4 +72,21 @@
     <span class="scroll-line"></span>
     Scroll to explore
   </div>
+   <style>
+  @media (max-width: 768px) {
+    #hero-inner {
+      flex-direction: column-reverse;
+      padding: 80px 24px 40px !important;
+      text-align: center;
+    }
+    #hero-inner .hero-tag,
+    #hero-inner .hero-focus {
+      justify-content: center;
+    }
+    #hero-inner img {
+      width: 180px !important;
+      height: 180px !important;
+    }
+  }
+</style>
 </section>
