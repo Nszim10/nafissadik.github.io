@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nafis Sadik Zim | Mechanical Engineer & Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Sections -->
+  <div id="home-placeholder"></div>
+  <div id="about-placeholder"></div>
+  <div id="research-placeholder"></div>
+  <div id="publications-placeholder"></div>
+  <div id="teaching-placeholder"></div>
+  <div id="cv-placeholder"></div>
+  <div id="contact-placeholder"></div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Nafis Sadik Zim · Lecturer, SUST · Built with GitHub Pages
+  </footer>
+
+  <script>
+    // Loads each section HTML file into its placeholder
+    const sections = [
+      { id: 'nav-placeholder',          file: 'sections/nav.html' },
+      { id: 'home-placeholder',         file: 'sections/home.html' },
+      { id: 'about-placeholder',        file: 'sections/about.html' },
+      { id: 'research-placeholder',     file: 'sections/research.html' },
+      { id: 'publications-placeholder', file: 'sections/publications.html' },
+      { id: 'teaching-placeholder',     file: 'sections/teaching.html' },
+      { id: 'cv-placeholder',           file: 'sections/cv.html' },
+      { id: 'contact-placeholder',      file: 'sections/contact.html' },
+    ];
+
+    sections.forEach(({ id, file }) => {
+      fetch(file)
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById(id).innerHTML = html;
+        });
+    });
+  </script>
+
+</body>
+</html>
